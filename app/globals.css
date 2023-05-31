@@ -2,26 +2,194 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.nav-container {
+  padding: 0% 10%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.custome-nav {
+  width: 80%;
+  margin: 1% 10% 0% 10%;
+}
+
+.banner-container {
+  position: relative;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  padding-bottom: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.title {
+  font-size: 6.2rem;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 6.44%, #FFFFFF 95.08%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-60%, -60%);
+}
+
+.no-highlights {
+  text-align: center
+}
+
+.highlights {
+  padding: 3% 10% 7% 10%;
+
+}
+
+.card {
+  box-shadow: 0px 0px 16px rgba(0, 128, 128, 0.16);
+  border-radius: 8px;
+  cursor: pointer
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.highlights-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px
+}
+
+.category-info {
+  background-color: #FFF;
+  border-radius: 8px;
+}
+
+.category-activities {
+  border-radius: 8px;
+  padding: 10px 40px;
+}
+
+.category {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.category-container {
+  background: #E6F2F2;
+  padding: 3% 10% 7% 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px
+}
+
+.category-list {
+  display: grid;
+  row-gap: 10px;
+}
+
+.travel-guide-info-container {
+  border-radius: 8px;
+  padding: 14px;
+  background-color: #FFF;
+}
+
+.travel-guide-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-btn {
+  border-radius: 8px;
+  color: #008080;
+  border: 1px solid #008080;
+  padding: 5px 15px
+}
+
+.hightlight-activity-container {
+  padding: 2% 5%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px
+}
+
+.hightlight-activity-img-container {
+  padding-bottom: 400px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.avtivity-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.activity {
+  padding: 5px 15px;
+  background-color: #FFF;
+  border: 1px solid #008080;
+  border-radius: 8px;
+}
+
+.footer {
+  padding: 3% 10%;
+  background-color: #001A1A
+}
+
+@media screen and (max-width: 850px) {
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hightlight-activity-container {
+    grid-template-columns: 2fr 3fr;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media screen and (max-width: 768px) {
+  .banner {
+    padding-bottom: 350px;
+  }
+
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .highlights-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  .hightlight-activity-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-width: 80%
+  }
 }
